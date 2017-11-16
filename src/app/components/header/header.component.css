@@ -1,0 +1,15 @@
+.alert {
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px){
+  #zipcode {
+    width: 172px;
+    display: inline-block;
+  }
+  .navbar-form {
+      padding-top: 0;
+  }
+}

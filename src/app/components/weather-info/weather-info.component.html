@@ -1,0 +1,19 @@
+<div class="weather-info">
+  <div *ngFor="let forecast of getForecast()" class="well flex">
+    <div>
+      <h3>{{ forecast.data.name }} <span class="country-name">({{ forecast.data.sys.country }})</span></h3>
+      <h4 class="weather-heading">Geolocation Coordinates:</h4>
+      <p class="weather-desc">Lon: {{ forecast.data.coord.lon }} Lat: {{ forecast.data.coord.lat }}</p>
+      <h4 class="weather-heading">Temperatures:</h4>
+      <p>
+        Current {{ forecast.data.main.temp | number:'.0-0' }}
+        - Max {{ forecast.data.main.temp_max | number:'.0-0' }}
+        - Min {{ forecast.data.main.temp_min | number:'.0-0' }}
+      </p>
+      <h4 class="weather-heading">Wind Speed: <span class="wind-speed">{{ forecast.data.wind.speed }}</span></h4>
+    </div>
+    <div>
+      <img [src]="forecastService.getForcastrImg(forecast.data.weather[0].id)">
+    </div>
+ </div>
+</div>

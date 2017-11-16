@@ -1,0 +1,26 @@
+img {
+    vertical-align: middle;
+    border: 0;
+    max-width: 170px;
+}
+span.country-name {
+    font-size: 0.8em;
+}
+span.wind-speed {
+    font-size: 0.9em;
+    font-weight: normal;
+}
+.weather-info h3.weather-heading {
+  margin-top: 0;
+}
+.weather-info h4.weather-heading {
+    margin-bottom: 4px;
+    font-size: 1.2em;
+}
+.weather-info h5.weather-heading {
+    font-size: 1.4em;
+}
+.weather-info p.wweather-desc{
+    margin-bottom: 5px;
+    font-size: 1em;
+}

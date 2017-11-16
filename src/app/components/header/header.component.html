@@ -1,0 +1,23 @@
+<nav class="">
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Weather Forecast</h1></div>
+  <div class="panel-body">
+    <form [formGroup]="zipForm" class="navbar-form pull-xs-left" novalidate>
+      <div class="form-group">
+      <label for="name" class="hidden">zipcode</label>
+       <input 
+         formControlName="zipcode" 
+         id="zipcode" 
+         type="text" #zip (keyup.enter)="searchLocation($event,zip.value)" 
+         class="form-control" 
+         placeholder="zip-code">
+         <button type="submit" (click)="searchLocation($event,zip.value)" [attr.disabled]="zipcode.invalid ? 'disabled' : null" class="btn btn-default">Search</button>
+         <div *ngIf="zipcode.touched && zipcode.invalid" class="alert alert-danger">
+            <div *ngIf="zipcode.errors.pattern">Zipcode must have minimum 5 digits</div>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</div>
+</nav>
